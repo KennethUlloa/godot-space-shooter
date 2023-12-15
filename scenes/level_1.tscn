@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c74amvgxwl5hp"]
+
+[ext_resource type="Texture2D" uid="uid://bxlxv48xfugb0" path="res://assets/background/blue.png" id="1_3lfva"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_oum32"]
+[ext_resource type="PackedScene" uid="uid://d14rinikgpy04" path="res://scenes/rocket.tscn" id="3_jmaxb"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1163.0
+offset_bottom = 658.0
+texture = ExtResource("1_3lfva")
+stretch_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("2_oum32")]
+position = Vector2(126, 294)
+
+[node name="Rocket" parent="." instance=ExtResource("3_jmaxb")]
+position = Vector2(207, 295)

@@ -3,6 +3,19 @@ extends CharacterBody2D
 @export var speed = 400
 @export var sprite_size = 50
 
+signal rocked_launched
+	
+func shoot():
+	#var rocket_instance = rocket_scene.instantiate()
+	#rocket_instance.global_position.x += 60
+	#add_child(rocket_instance)
+	emit_signal("rocked_launched")
+
+func _process(delta):
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+		
+
 func _physics_process(delta):
 	#velocity = Vector2(speed,0)
 	#move_and_slide()
